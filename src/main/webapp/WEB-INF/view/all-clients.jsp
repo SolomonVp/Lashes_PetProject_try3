@@ -6,7 +6,7 @@
 
 <h2 align="center">Все клиенты:</h2> <br>
 
-<table border="1"  bordercolor="black" bgcolor="#EE82EE" align="center" cellpadding="8">
+<table border="1"  bordercolor="#491e71" bgcolor="#EE82EE" align="center" cellpadding="8">
     <tr>
         <th>Имя</th>
         <th>Фамилия</th>
