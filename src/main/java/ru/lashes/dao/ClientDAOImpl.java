@@ -24,4 +24,10 @@ public class ClientDAOImpl implements ClientDAO{
         List<Client> allClients = query.getResultList();
         return allClients;
     }
+
+    @Override
+    public void saveClient(Client client) {
+        Session session = sessionFactory.getCurrentSession();
+        session.save(client);
+    }
 }

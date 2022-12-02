@@ -4,9 +4,9 @@
 <html>
 <body>
 
-<h2 align="center">Все клиенты:</h2> <br>
+<h2>Все клиенты:</h2> <br>
 
-<table border="1"  bordercolor="#491e71" bgcolor="#EE82EE" align="center" cellpadding="8">
+<table border="1"  bordercolor="#491e71" bgcolor="#EE82EE" cellpadding="8">
     <tr>
         <th>Имя</th>
         <th>Фамилия</th>
@@ -23,7 +23,10 @@
             <td>${clnt.discount}</td>
         </tr>
     </c:forEach>
-</table>
+</table> <br>
+<input type="button" value="Добавить" onclick="window.location.href = 'addNewClient'">
+
+
 
 
 </body>
