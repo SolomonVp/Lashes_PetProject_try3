@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import ru.lashes.entity.Client;
 import ru.lashes.service.ClientService;
 
@@ -32,5 +33,12 @@ public class MyController {
     public String saveClient(@ModelAttribute("client") Client client) {
         clientService.saveClient(client);
         return "redirect:/";
+    }
+
+    @RequestMapping("/updateInfo")
+    public String updateClient(@RequestParam("clntId") int id, Model model) {
+        Client client = clientService.getClient(id);
+        model.addAttribute("client", client);
+        return "client-Info";
     }
 }

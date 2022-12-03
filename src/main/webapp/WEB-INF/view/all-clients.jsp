@@ -13,14 +13,23 @@
         <th>Размер ресниц</th>
         <th>Посещений</th>
         <th>Скидка</th>
+        <th>Операции</th>
     </tr>
     <c:forEach var="clnt" items="${allCls}">
+
+        <c:url var="updateButton" value="/updateInfo">
+            <c:param name="clntId" value="${clnt.id}"/>
+        </c:url>
+
         <tr>
             <td>${clnt.name}</td>
             <td>${clnt.surname}</td>
             <td>${clnt.sizeLash}</td>
             <td>${clnt.countVisits}</td>
             <td>${clnt.discount}</td>
+            <td>
+                <input type="button" value="Изменить" onclick="window.location.href = '${updateButton}'"/>
+            </td>
         </tr>
     </c:forEach>
 </table> <br>

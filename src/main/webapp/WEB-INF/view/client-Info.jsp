@@ -5,6 +5,8 @@
 <h2>Client Info</h2> <br>
 
 <form:form action="saveClient" modelAttribute="client">
+<%--    Скрытая форма ID--%>
+    <form:hidden path="id"/>
     Имя                        <form:input path="name"/>         <br><br>
     Фамилия                    <form:input path="surname"/>      <br><br>
     Размер ресниц              <form:input path="sizeLash"/>     <br><br>
