@@ -37,4 +37,33 @@ public class ClientDAOImpl implements ClientDAO{
         Client client = session.get(Client.class, id);
         return client;
     }
+
+    @Override
+    public void deleteClient(int id) {
+        Session session = sessionFactory.getCurrentSession();
+        Query<Client> query = session.createQuery("delete from Client where id =:clientId");
+        query.setParameter("clientId", id);
+        query.executeUpdate();
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

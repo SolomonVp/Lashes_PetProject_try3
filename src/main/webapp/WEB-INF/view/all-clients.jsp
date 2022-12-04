@@ -20,6 +20,9 @@
         <c:url var="updateButton" value="/updateInfo">
             <c:param name="clntId" value="${clnt.id}"/>
         </c:url>
+        <c:url var="deleteButton" value="/deleteClient">
+            <c:param name="clntId" value="${clnt.id}"/>
+        </c:url>
 
         <tr>
             <td>${clnt.name}</td>
@@ -29,6 +32,7 @@
             <td>${clnt.discount}</td>
             <td>
                 <input type="button" value="Изменить" onclick="window.location.href = '${updateButton}'"/>
+                <input type="button" value="Удалить" onclick="window.location.href = '${deleteButton}'"/>
             </td>
         </tr>
     </c:forEach>

@@ -10,4 +10,6 @@ public interface ClientDAO {
     public void saveClient(Client client);
 
     public Client getClient(int id);
+
+    public void deleteClient(int id);
 }

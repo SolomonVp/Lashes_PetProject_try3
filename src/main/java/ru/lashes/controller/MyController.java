@@ -41,4 +41,10 @@ public class MyController {
         model.addAttribute("client", client);
         return "client-Info";
     }
+
+    @RequestMapping("/deleteClient")
+    public String deleteClient(@RequestParam("clntId") int id) {
+        clientService.deleteClient(id);
+        return "redirect:/";
+    }
 }
