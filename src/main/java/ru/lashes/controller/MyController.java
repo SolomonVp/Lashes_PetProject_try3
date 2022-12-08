@@ -22,6 +22,19 @@ public class MyController {
     public String getInfoForAll() {
         return "index";
     }
+    @GetMapping("/master_info")
+    public String getInfoOnlyForMaster() {
+        return "view-for-master";
+    }
+    @GetMapping("/manager_info")
+    public String getInfoOnlyForManager() {
+        return "view-for-manager";
+    }
+
+    @GetMapping("/clnt_info")
+    public String getInfoOnlyForClient() {
+        return "view-for-clnt";
+    }
 
     @RequestMapping("/showAllClients")
     public String showAllClients(Model model) {

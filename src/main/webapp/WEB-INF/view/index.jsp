@@ -8,19 +8,11 @@
 
 <p>Общая информация</p>
 
-<br><br>
-<input type="button" value="Manager"
-       onclick="window.location.href = 'hr_info'">
-Для менеджеров
-<br><br>
-<input type="button" value="Master"
-       onclick="window.location.href = 'manager_info'">
-Для мастеров
-<br><br>
-<input type="button" value="Master"
-       onclick="window.location.href = 'clnt_info'">
-Для клиентов
-
+<ul>
+    <li><input type="button" value="Master" onclick="window.location.href = 'master_info'"> Для мастеров </li>
+    <li> <input type="button" value="Manager" onclick="window.location.href = 'manager_info'"> Для менеджеров </li>
+    <li><input type="button" value="Client" onclick="window.location.href = 'clnt_info'"> Для клиентов </li>
+</ul>
 
 </body>
 </html>
