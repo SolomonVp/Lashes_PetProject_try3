@@ -22,25 +22,27 @@ public class MyController {
     public String getInfoForAll() {
         return "index";
     }
-    @GetMapping("/master_info")
-    public String getInfoOnlyForMaster() {
-        return "view-for-master";
-    }
-    @GetMapping("/manager_info")
-    public String getInfoOnlyForManager() {
-        return "view-for-manager";
-    }
+
 
     @GetMapping("/clnt_info")
     public String getInfoOnlyForClient() {
         return "view-for-clnt";
     }
 
-    @RequestMapping("/showAllClients")
+
+
+    @RequestMapping("/master_info")
     public String showAllClients(Model model) {
         List<Client> allClients = clientService.getAllClients();
         model.addAttribute("allCls", allClients);
-        return "all-clients";
+        return "view-for-master";
+    }
+
+    @RequestMapping("/manager_info")
+    public String showAllClientsForManager(Model model) {
+        List<Client> allClients = clientService.getAllClients();
+        model.addAttribute("allClsMan", allClients);
+        return "view-for-manager";
     }
     @RequestMapping("/addNewClient")
     public String addNewClient(Model model) {
